@@ -56,7 +56,7 @@ func TestPeerClientShutdown(t *testing.T) {
 						Behavior: c.Behavior,
 					})
 
-					assert.Contains(t, []error{nil, &gubernator.PeerErr{}}, err)
+					assert.Subset(t, []error{nil, &gubernator.PeerErr{}}, err)
 				}()
 			}
 
